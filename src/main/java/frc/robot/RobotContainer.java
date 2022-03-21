@@ -23,7 +23,6 @@ import frc.robot.subsystems.Shooter;
 import frc.robot.subsystems.Telescopico;
 import edu.wpi.first.wpilibj2.command.Command;
 import edu.wpi.first.wpilibj2.command.ParallelCommandGroup;
-import edu.wpi.first.wpilibj2.command.ParallelDeadlineGroup;
 import edu.wpi.first.wpilibj2.command.SequentialCommandGroup;
 import edu.wpi.first.wpilibj2.command.WaitCommand;
 import edu.wpi.first.wpilibj2.command.button.JoystickButton;
@@ -143,16 +142,6 @@ public class RobotContainer {
         new WaitCommand(2),
         new TraccionAutoVertical(r_Traccion, -900, 900)
       )
-      )
- /*return new ParallelCommandGroup( 
-    new ShooterComVels(r_Shooter, .21),
-    new SequentialCommandGroup(new WaitCommand(3)),
-      new IntakeComFront(r_IntakeFront, -1),
-      new UpBallsAutoCom(r_UpBalls, 1),
-      new SequentialCommandGroup(
-        new WaitCommand(5),
-        new ParallelDeadlineGroup(new TraccionAutoVertical(r_Traccion, 50, 50),
-        new WaitCommand(1)
-        )));
-  }*/
+      ); 
+  }
   }
